@@ -81,8 +81,7 @@ public class Game {
                                     destLocX=Integer.parseInt(destX);
                                     destLocY=Integer.parseInt(destY);
                                 }
-				
-                                //حرکت مهره 
+				 
 				moveVerify v= new moveVerify(initLocX, initLocY, destLocX, destLocY, white, b);
 				Board check=v.changedBoard();
 				if(b.getPiece(initLocX, initLocY)!=null)
@@ -93,7 +92,6 @@ public class Game {
 				}
 				else
 				{
-                                    //جابه جایی مهره انجام شده
 					System.out.printf("%nMove was made next player");
 					playGame(false,b);
 					return;
@@ -101,7 +99,6 @@ public class Game {
 			}
 			if(white==false)
 			{
-//                            نوبت مهره ی حریف است که مهره ی ود را جابهجا کند
 				System.out.printf("%nBlack Player make move%n");
 				b.printBoard();
 				MinMax a=new MinMax();
@@ -113,8 +110,6 @@ public class Game {
 		}
 	}
         
-//        برای وقتی که رنگ مهره رو سیاه انتخاب کرده باشیم
-//        مثل متد بالاست هیچ فرقی نداره
         public void playGameB(boolean black, Board b){
 		
 		if(checkmate == false)
